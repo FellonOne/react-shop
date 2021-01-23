@@ -1,0 +1,1 @@
+export { Sneakers } from './models';

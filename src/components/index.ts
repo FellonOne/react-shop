@@ -1,1 +1,11 @@
 export { App } from './App/App';
+export { Header } from './Header/Header';
+export { Footer } from './Footer/Footer';
+export { Page } from './Page/Page';
+export { PageContainer } from './PageContainer/PageContainer';
+export { Rect } from './Rect/Rect';
+export { SneakersList } from './SneakersList/SneakersList';
+export { SneakersListStub } from './SneakersList/SneakersList.stub';
+export { Sneakers } from './Sneakers/Sneakers';
+export { SneakersStub } from './Sneakers/Sneakers.stub';
+export { PageMeta } from './PageMeta/PageMeta';

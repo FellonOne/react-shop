@@ -1,0 +1,9 @@
+.sneakers-list-stub {
+  padding-top: 8px;
+}
+
+.sneakers-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
