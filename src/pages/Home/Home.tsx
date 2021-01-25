@@ -42,7 +42,7 @@ const HomePage = (props: Props): JSX.Element => {
       <PageContainer
         btn={{
           text: 'See more',
-          to: '..',
+          to: '/catalog',
         }}
       >
         <h2>Newest</h2>

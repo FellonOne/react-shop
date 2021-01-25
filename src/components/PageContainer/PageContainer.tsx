@@ -4,8 +4,6 @@ import { Link } from 'react-router-dom';
 
 import { Button } from 'components';
 
-import './PageContainer.css';
-
 type Props = {
   children: React.ReactNode | React.ReactNode[];
   btn?: {

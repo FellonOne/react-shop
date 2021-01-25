@@ -9,6 +9,7 @@ import { Header, Footer } from 'components';
 import { Home as HomePage } from '../../pages/Home/Home';
 import { Catalog as CatalogPage } from '../../pages/Catalog/Catalog';
 import { NotFound as NotFoundPage } from 'pages/404/404';
+import { Upcoming as UpcomingPage } from 'pages/Upcoming/Upcoming';
 
 import './App.css';
 
@@ -31,6 +32,7 @@ const AppComponent = (props: ConnectedProps<typeof connector>): JSX.Element => {
       <Switch>
         <Route path="/" component={HomePage} exact />
         <Route path="/catalog" component={CatalogPage} exact />
+        <Route path="/upcoming" component={UpcomingPage} exact />
         <Route path="*" component={NotFoundPage} />
       </Switch>
       <Footer />
