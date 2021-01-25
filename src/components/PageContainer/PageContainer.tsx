@@ -1,5 +1,8 @@
-import React, { ReactNode } from 'react';
+import React from 'react';
 import * as bem from 'b_';
+import { Link } from 'react-router-dom';
+
+import { Button } from 'components';
 
 import './PageContainer.css';
 
@@ -21,7 +24,13 @@ export const PageContainer = (props: Props): JSX.Element => {
   return (
     <div className={cls}>
       {children}
-      {btn && <div> go go go</div>}
+      {btn && (
+        <div className={b('container-more')}>
+          <Link to={btn.to}>
+            <Button>{btn.text}</Button>
+          </Link>
+        </div>
+      )}
     </div>
   );
 };

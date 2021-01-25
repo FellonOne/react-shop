@@ -4,6 +4,7 @@ import { Configuration as WebpackDevServerConfig } from 'webpack-dev-server';
 
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
+import CopyWebpackPlugin from 'copy-webpack-plugin';
 
 import StyleLoader from './loaders/css';
 import FileLoader from './loaders/file';
@@ -41,6 +42,10 @@ export const config: Config = {
         ENV.APP_MODE === AppMode.PRODUCTION
           ? '[name].[contenthash].css'
           : '[name].css',
+    }),
+
+    new CopyWebpackPlugin({
+      patterns: [{ from: 'static/images', to: 'images' }],
     }),
     new HtmlWebpackPlugin({
       publicPath: '/',

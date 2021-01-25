@@ -1,6 +1,7 @@
 export { App } from './App/App';
 export { Header } from './Header/Header';
 export { Footer } from './Footer/Footer';
+export { Button } from './Button/Button';
 export { Page } from './Page/Page';
 export { PageContainer } from './PageContainer/PageContainer';
 export { Rect } from './Rect/Rect';

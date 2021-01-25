@@ -8,7 +8,7 @@ import { rootSaga } from './rootSaga';
 
 export const history = createBrowserHistory();
 
-export const configureHistory = (initialState = {}) => {
+export const configStore = (initialState = {}) => {
   const sagaMiddleware = createSagaMiddleware();
 
   const store = createStore(

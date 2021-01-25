@@ -7,6 +7,7 @@ import { AppState } from 'store/type';
 import { Header, Footer } from 'components';
 
 import { Home as HomePage } from '../../pages/Home/Home';
+import { NotFound as NotFoundPage } from 'pages/404/404';
 
 import './App.css';
 
@@ -27,7 +28,8 @@ const AppComponent = (props: ConnectedProps<typeof connector>): JSX.Element => {
       </Helmet>
       <Header />
       <Switch>
-        <Route path="/" exact component={HomePage} />
+        <Route path="/" component={HomePage} exact />
+        <Route path="*" component={NotFoundPage} />
       </Switch>
       <Footer />
     </div>

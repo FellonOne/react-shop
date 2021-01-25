@@ -1,11 +1,17 @@
-import { call, takeLatest } from 'redux-saga/effects';
+import { call, put, takeLatest } from 'redux-saga/effects';
+import { fetchHomePageError, fetchHomePageSuccess } from './actions';
+import { fetchService } from './service';
+import { FetchHomeTypes } from './types';
 
 export function* homePageSaga() {
-  yield takeLatest('assa', fetchHomePage);
+  yield takeLatest(FetchHomeTypes.FETCH_HOMEPAGE, fetchHomePage);
 }
 
-function* fetchHomePage() {
+function* fetchHomePage(): unknown {
   try {
-    const data = yield call(fetchHomePage);
-  } catch (err) {}
+    const data = yield call(fetchService);
+    yield put(fetchHomePageSuccess(data));
+  } catch (err) {
+    yield put(fetchHomePageError(err.message));
+  }
 }

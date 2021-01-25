@@ -4,9 +4,9 @@ import { Provider } from 'react-redux';
 import { ConnectedRouter } from 'connected-react-router';
 
 import { App } from 'components';
-import { configureHistory, history } from 'store/configStore';
+import { configStore, history } from 'store/configStore';
 
-const store = configureHistory();
+const store = configStore();
 
 ReactDom.render(
   <Provider store={store}>
