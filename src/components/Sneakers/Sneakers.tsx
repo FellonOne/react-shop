@@ -1,8 +1,8 @@
 import React from 'react';
 import bem from 'b_';
-
-import 'Sneakers.css';
 import { Link } from 'react-router-dom';
+
+import './Sneakers.css';
 
 type Props = {
   title: string;

@@ -1,9 +1,8 @@
 import React from 'react';
 
-import * as bem from 'b_';
-import { HomeStub } from './Home.stub';
 import { Sneakers as SneakersType } from 'types';
 import { Page, PageContainer, PageMeta } from 'components';
+import { HomeStub } from './Home.stub';
 
 type Props = {
   data: {
@@ -15,6 +14,8 @@ type Props = {
 };
 
 export const Home = (props: Props): JSX.Element => {
+  return <HomeStub />; 
+
   const { data, fetchHomePage, isLoading } = props;
 
   React.useEffect(() => {
